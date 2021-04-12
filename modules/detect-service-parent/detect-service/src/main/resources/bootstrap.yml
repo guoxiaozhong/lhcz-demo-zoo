@@ -1,0 +1,21 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: detect-service
+  datasource:
+    url: jdbc:mysql://218.84.186.2:30007/test?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: asdlkjcs2
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848   # 配置Nacos地址
+      config:
+        server-addr: localhost:8848 #Nacos作为配置中心地址
+        file-extension: yml  #指定yaml格式的配置
+# ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file.extension}
+# detect-service-dev.yml

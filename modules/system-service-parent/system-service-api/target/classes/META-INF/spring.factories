@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.lhcz.system.api.feign.fallback.SysUserServiceClientFallback,\
+  cn.lhcz.system.api.feign.factory.SysUserServiceClientFallbackFactory
