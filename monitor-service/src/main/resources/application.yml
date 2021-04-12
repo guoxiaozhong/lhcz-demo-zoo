@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: dev
+  boot:
+    admin:
+      context-path: /admin
+      client:
+        enabled: false
+        auto-registration: false
+        instance:
+          service-base-url: http://${MONITOR_HOST:localhost}:${server.port}
+      discovery:
+        ignored-services: nacos  # 忽略nacos服务
+      ui:
+        title: monitor-service
+  security:
+    user:
+      name: admin
+      password: admin

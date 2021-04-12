@@ -27,9 +27,10 @@ lhcz-demo-zoo
         -- common-log       日志
         -- common-oss       文件存储服务
     -- config-service   
-    -- gateway-service
+    -- gateway-service      统一网关
     -- modules              业务模块
         -- 
+    -- monitor-service      admin监测模块
         
         
 ## 项目过程
@@ -39,5 +40,8 @@ lhcz-demo-zoo
 4. 完成配置中心
 5. 完成spring-admin
 6. gateway gateway + nacos配置中心实现动态gateway, 且实现简单的token验证，有其他需要可自行扩充
-7. 
+7. 完成admin监测模块
+
+## todo
+2. spring-security + oauth2 + jwt 实现登录验证, 以及refresh token
 
