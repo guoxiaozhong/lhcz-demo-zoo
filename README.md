@@ -13,7 +13,7 @@
 - 缓存           redis
 - 文件系统       minio
 - 链路追踪       zipkin
-- 消息队列       RabbitMQ
+- 消息队列       RabbitMQ / kafka
 - 部署           Docker + k8s
 - // todo
 
@@ -43,5 +43,6 @@ lhcz-demo-zoo
 7. 完成admin监测模块
 
 ## todo
-2. spring-security + oauth2 + jwt 实现登录验证, 以及refresh token
+1. spring-security + oauth2 + jwt 实现登录验证, 以及refresh token
+2. 完善gateway
 
