@@ -41,6 +41,7 @@ lhcz-demo-zoo
 5. 完成spring-admin
 6. gateway gateway + nacos配置中心实现动态gateway, 且实现简单的token验证，有其他需要可自行扩充
 7. 完成admin监测模块
+8. 完成集成sentinel, 及nacos + sentinel
 
 ## todo
 1. spring-security + oauth2 + jwt 实现登录验证, 以及refresh token

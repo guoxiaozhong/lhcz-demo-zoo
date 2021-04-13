@@ -14,3 +14,27 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848   # 配置Nacos地址
+      config:
+        server-addr: localhost:8848 #Nacos作为配置中心地址
+        file-extension: yaml  #指定yaml格式的配置
+# ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file.extension}
+# detect-service-dev.yml
+    sentinel:
+      transport:
+        # 配置sentinel dashboard地址
+        dashboard: localhost:8080
+        # 默认8719端口，假如被占用会自动从8719开始依次+1扫描，直至找到未被占用的端口
+        port: 8719
+      datasource:
+        ds:
+          nacos:
+            ### nacos连接地址
+            server-addr: 127.0.0.1:8848
+            ## nacos连接的分组
+            group-id: DEFAULT_GROUP
+            ### 路由存储规则
+            rule-type: flow
+            ### 读取配置文件的 data-id
+            data-id: detect-sentinal
+            ###  文件类型为json
+            data-type: json
