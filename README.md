@@ -29,7 +29,9 @@ lhcz-demo-zoo
     -- config-service   
     -- gateway-service      统一网关
     -- modules              业务模块
-        -- 
+        -- auth-service     单点登录模块
+        -- detect-service   业务模块1
+        -- system-service   业务模块2
     -- monitor-service      admin监测模块
         
         
