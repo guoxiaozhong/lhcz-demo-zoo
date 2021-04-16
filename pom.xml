@@ -13,6 +13,7 @@
         <module>common</module>
         <module>gateway-service</module>
         <module>monitor-service</module>
+        <module>zipkin-server</module>
     </modules>
 
     <properties>
