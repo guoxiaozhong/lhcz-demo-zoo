@@ -46,6 +46,31 @@ lhcz-demo-zoo
 8. 完成集成sentinel, 及nacos + sentinel
 
 ## todo
-1. spring-security + oauth2 + jwt 实现登录验证, 以及refresh token
+1. spring-security + oauth2 + jwt 实现登录验证, refresh token, revoke token等
 2. 完善gateway
+
+
+## others
+1. 配置dashboard(services)
+在.idea中的workspace.xml文件中添加以下内容, 快捷键 `alt+8` 打开即可.
+```
+<component name="RunDashboard"> 
+	<option name="configurationTypes">
+	 	<set> 
+	 		<option value="SpringBootApplicationConfigurationType" />
+	 	</set> 
+ 	</option> 
+ 	<option name="ruleStates"> 
+ 		<list> 
+ 			<RuleState> 
+ 				<option name="name" value="ConfigurationTypeDashboardGroupingRule" /> 
+ 			</RuleState> 
+ 			<RuleState> 
+ 				<option name="name" value="StatusDashboardGroupingRule" /> 
+ 			</RuleState> 
+ 		</list>
+ 	</option> 
+</component>
+```
+
 
