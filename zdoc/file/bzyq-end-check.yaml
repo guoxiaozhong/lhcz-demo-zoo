@@ -1,0 +1,37 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: bzyq-end-check
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  template:
+    metadata:
+      labels:
+        run: bzyq-end-check
+    spec:
+      containers:
+        - name: bzyq-end-check
+          image: 192.168.100.7/bzyq/bzyq-end-check:2021-02-23-10-37
+          ports:
+            - containerPort: 8031
+          volumeMounts:
+            - name: v-i
+              mountPath: /data/
+      volumes:
+        - name: v-i
+          persistentVolumeClaim:
+            claimName: v-i-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bzyq-end-check
+spec:
+  selector:
+    run: bzyq-end-check
+  type: NodePort
+  ports:
+    - nodePort: 30011
+      port: 8031
+      targetPort: 8031
